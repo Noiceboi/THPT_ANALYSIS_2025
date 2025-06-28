@@ -63,7 +63,7 @@ Ví dụ sử dụng:
     
     parser.add_argument(
         '--mode', 
-        choices=['scrape', 'analyze', 'report', 'visualize', 'full'],
+        choices=['scrape', 'analyze', 'report', 'visualize', 'insight', 'full'],
         required=True,
         help='Chế độ hoạt động của hệ thống'
     )
@@ -269,6 +269,109 @@ def run_full_mode(args, logger):
         }
     }
 
+def run_insight_analysis(args, logger):
+    """
+    Chạy phân tích insight về độ khó tổ hợp
+    Theo framework: Toán-Anh = "Kẻ hủy diệt", Lý = "Dễ thở"
+    """
+    logger.info("=== CHẠY PHÂN TÍCH INSIGHT ĐỘ KHÓ TỔ HỢP ===")
+    
+    try:
+        from data_analyzer import DifficultyAnalyzer
+        
+        # Khởi tạo analyzer
+        difficulty_analyzer = DifficultyAnalyzer()
+        
+        print("🔍 Đang tính toán độ khó từng môn...")
+        subject_difficulty = difficulty_analyzer.calculate_subject_difficulty()
+        
+        print("⚖️ Đang tính toán độ khó tổ hợp...")
+        combo_difficulty = difficulty_analyzer.calculate_combo_difficulty()
+        
+        print("📊 Đang chạy kiểm định thống kê...")
+        stats_results = difficulty_analyzer.statistical_comparison()
+        
+        print("📈 Đang tạo biểu đồ trực quan...")
+        fig1, fig2, fig3 = difficulty_analyzer.create_difficulty_visualizations()
+        
+        # Lưu biểu đồ
+        fig1.write_html("output/charts/difficulty_comparison.html")
+        fig2.write_html("output/charts/subject_heatmap.html") 
+        fig3.write_html("output/charts/insight_breakdown.html")
+        
+        print("📝 Đang tạo báo cáo insight...")
+        insight_report = difficulty_analyzer.generate_insight_report()
+        
+        # Lưu báo cáo
+        with open("output/reports/insight_analysis.md", "w", encoding="utf-8") as f:
+            f.write(insight_report)
+            
+        # Lưu dữ liệu CSV thay vì JSON để tránh serialization issues
+        import pandas as pd
+        
+        # Subject difficulty DataFrame
+        subject_df = pd.DataFrame(subject_difficulty).T
+        subject_df.to_csv("output/tables/subject_difficulty.csv")
+        
+        # Combo difficulty DataFrame  
+        combo_data = []
+        for combo, data in combo_difficulty.items():
+            row = {
+                'combo': combo,
+                'subjects': ', '.join(data['subjects']),
+                'final_difficulty': data['final_difficulty'],
+                'weighted_difficulty': data['weighted_difficulty'],
+                'insight_modifier': data['insight_modifier'],
+                'prediction': data['prediction']
+            }
+            combo_data.append(row)
+        
+        combo_df = pd.DataFrame(combo_data)
+        combo_df.to_csv("output/tables/combo_difficulty.csv", index=False)
+        
+        # In kết quả chính
+        print("\n" + "="*60)
+        print("🎯 KẾT QUẢ INSIGHT ANALYSIS")
+        print("="*60)
+        
+        print("\n📊 TOP 3 TỔ HỢP KHÓ NHẤT:")
+        sorted_combos = sorted(combo_difficulty.items(), 
+                             key=lambda x: x[1]['final_difficulty'], reverse=True)
+        
+        for i, (combo, data) in enumerate(sorted_combos[:3], 1):
+            print(f"{i}. {combo} ({', '.join(data['subjects'])}): {data['final_difficulty']:.2f}/10")
+            print(f"   └─ {data['prediction']}")
+        
+        print(f"\n🔬 ANOVA p-value: {stats_results['anova']['p_value']:.4f}")
+        print(f"📈 Significant differences: {'✅ Yes' if stats_results['anova']['significant'] else '❌ No'}")
+        
+        print("\n💡 INSIGHT VALIDATION:")
+        a01_score = combo_difficulty['A01']['final_difficulty']
+        d01_score = combo_difficulty['D01']['final_difficulty'] 
+        a00_score = combo_difficulty['A00']['final_difficulty']
+        
+        print(f"• A01 (Toán+Anh hủy diệt): {a01_score:.2f}/10 {'✅' if a01_score > 7 else '❌'}")
+        print(f"• D01 (Biến động mạnh): {d01_score:.2f}/10 {'✅' if abs(d01_score - 6.5) > 1 else '❌'}")
+        print(f"• A00 (Lý dễ thở giúp): {a00_score:.2f}/10 {'✅' if a00_score < a01_score else '❌'}")
+        
+        print("\n📁 Files được tạo:")
+        print("• output/reports/insight_analysis.md")
+        print("• output/charts/difficulty_comparison.html")
+        print("• output/charts/subject_heatmap.html")
+        print("• output/charts/insight_breakdown.html")
+        print("• output/tables/difficulty_scores.json")
+        
+        return {
+            'subject_difficulty': subject_difficulty,
+            'combo_difficulty': combo_difficulty,
+            'stats_results': stats_results
+        }
+        
+    except Exception as e:
+        logger.error(f"Lỗi trong insight analysis: {e}")
+        print(f"❌ Lỗi: {e}")
+        return None
+
 def main():
     """Hàm chính"""
     # Cấu hình logging
@@ -293,6 +396,9 @@ def main():
             
         elif args.mode == 'report':
             result = run_report_mode(args, logger)
+            
+        elif args.mode == 'insight':
+            result = run_insight_analysis(args, logger)
             
         elif args.mode == 'full':
             result = run_full_mode(args, logger)

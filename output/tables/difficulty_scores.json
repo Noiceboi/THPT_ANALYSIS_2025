@@ -1,0 +1,145 @@
+{
+  "subject_difficulty": {
+    "Toán": {
+      "avg_score": 5.3,
+      "std_dev": 2.1,
+      "pct_below5": 45.2,
+      "difficulty_sentiment": 8.5,
+      "composite_difficulty": 4.966
+    },
+    "Anh": {
+      "avg_score": 5.1,
+      "std_dev": 2.3,
+      "pct_below5": 48.7,
+      "difficulty_sentiment": 9.0,
+      "composite_difficulty": 5.291
+    },
+    "Lý": {
+      "avg_score": 6.8,
+      "std_dev": 1.4,
+      "pct_below5": 18.3,
+      "difficulty_sentiment": 4.2,
+      "composite_difficulty": 2.741
+    },
+    "Hóa": {
+      "avg_score": 6.2,
+      "std_dev": 1.7,
+      "pct_below5": 28.1,
+      "difficulty_sentiment": 5.8,
+      "composite_difficulty": 3.5909999999999997
+    },
+    "Văn": {
+      "avg_score": 6.9,
+      "std_dev": 1.2,
+      "pct_below5": 15.4,
+      "difficulty_sentiment": 3.8,
+      "composite_difficulty": 2.48
+    },
+    "Sinh": {
+      "avg_score": 6.1,
+      "std_dev": 1.8,
+      "pct_below5": 31.2,
+      "difficulty_sentiment": 6.1,
+      "composite_difficulty": 3.802
+    }
+  },
+  "combo_difficulty": {
+    "A00": {
+      "subjects": [
+        "Toán",
+        "Lý",
+        "Hóa"
+      ],
+      "final_difficulty": 3.089115,
+      "weighted_difficulty": 3.43235,
+      "insight_modifier": 0.9,
+      "prediction": "Dễ - Điểm chuẩn có thể tăng"
+    },
+    "A01": {
+      "subjects": [
+        "Toán",
+        "Lý",
+        "Anh"
+      ],
+      "final_difficulty": 6.0463,
+      "weighted_difficulty": 4.651,
+      "insight_modifier": 1.3,
+      "prediction": "Khó - Điểm chuẩn giảm"
+    },
+    "B00": {
+      "subjects": [
+        "Toán",
+        "Hóa",
+        "Sinh"
+      ],
+      "final_difficulty": 3.83465,
+      "weighted_difficulty": 3.83465,
+      "insight_modifier": 1.0,
+      "prediction": "Dễ - Điểm chuẩn có thể tăng"
+    },
+    "B01": {
+      "subjects": [
+        "Toán",
+        "Sinh",
+        "Anh"
+      ],
+      "final_difficulty": 5.0533,
+      "weighted_difficulty": 5.0533,
+      "insight_modifier": 1.0,
+      "prediction": "Trung bình - Điểm chuẩn ổn định"
+    },
+    "C00": {
+      "subjects": [
+        "Văn",
+        "Sử",
+        "Địa"
+      ],
+      "final_difficulty": 0.372,
+      "weighted_difficulty": 0.372,
+      "insight_modifier": 1.0,
+      "prediction": "Dễ - Điểm chuẩn có thể tăng"
+    },
+    "C01": {
+      "subjects": [
+        "Văn",
+        "Toán",
+        "Lý"
+      ],
+      "final_difficulty": 2.9066,
+      "weighted_difficulty": 2.9066,
+      "insight_modifier": 1.0,
+      "prediction": "Dễ - Điểm chuẩn có thể tăng"
+    },
+    "D01": {
+      "subjects": [
+        "Văn",
+        "Toán",
+        "Anh"
+      ],
+      "final_difficulty": 5.593500000000001,
+      "weighted_difficulty": 4.4748,
+      "insight_modifier": 1.25,
+      "prediction": "Trung bình - Điểm chuẩn ổn định"
+    },
+    "D07": {
+      "subjects": [
+        "Toán",
+        "Hóa",
+        "Anh"
+      ],
+      "final_difficulty": 5.0005500000000005,
+      "weighted_difficulty": 5.0005500000000005,
+      "insight_modifier": 1.0,
+      "prediction": "Trung bình - Điểm chuẩn ổn định"
+    }
+  },
+  "statistical_results": {
+    "anova_p_value": 2.117471695325741e-135,
+    "anova_significant": true,
+    "significant_differences": {
+      "A00_vs_A01": true,
+      "A00_vs_D01": true,
+      "A01_vs_D01": true
+    }
+  }
+}
