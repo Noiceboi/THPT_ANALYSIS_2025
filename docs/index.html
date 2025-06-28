@@ -236,15 +236,24 @@
                         Nghiên cứu So sánh các Tổ hợp Môn THPT
                     </h1>
                     <p class="lead mb-4">
-                        Phân tích chuyên sâu <strong>8 tổ hợp môn</strong> chính trong kỳ thi THPT quốc gia từ 2018-2024 
-                        bằng phương pháp thống kê và machine learning
+                        Phân tích dữ liệu <strong>thực tế 2018-2024</strong> + Framework <strong>Insight 2025</strong> 
+                        với composite difficulty score và statistical validation
                     </p>
+                    <div class="alert alert-info bg-info bg-opacity-10 border-info mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-database text-info me-3 fs-4"></i>
+                            <div>
+                                <strong>Dữ liệu thực tế:</strong> 7 năm (2018-2024) với 52 bản ghi điểm chuẩn, 
+                                được thu thập và phân tích bằng các phương pháp thống kê chuyên nghiệp
+                            </div>
+                        </div>
+                    </div>
                     <div class="alert alert-warning bg-warning bg-opacity-10 border-warning mb-4">
                         <div class="d-flex align-items-center">
                             <i class="fas fa-exclamation-triangle text-warning me-3 fs-4"></i>
                             <div>
-                                <strong>Cập nhật 2025:</strong> Dự báo điểm chuẩn giảm mạnh do đề thi khó, 
-                                đặc biệt môn Toán và Tiếng Anh. Phổ điểm dịch chuyển về 5.5-6 điểm.
+                                <strong>🔮 Insight Framework 2025:</strong> Dự báo dựa trên phân tích chuyên sâu - 
+                                Toán+Anh là "kẻ hủy diệt", Lý "dễ thở", A01/D01 sẽ "biến động mạnh"
                             </div>
                         </div>
                     </div>
@@ -475,6 +484,46 @@
                         </table>
                     </div>
                     
+                    <!-- NEW: 2025 Insight Analysis -->
+                    <div class="mt-5 p-4 bg-gradient rounded-3" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="text-center text-white mb-4">
+                            <h3 class="fw-bold mb-3">🔮 INSIGHT ANALYSIS 2025</h3>
+                            <p class="lead mb-0">Framework phân tích độ khó composite với statistical validation</p>
+                        </div>
+                        
+                        <div class="row text-white g-3">
+                            <div class="col-md-4">
+                                <div class="text-center p-3 rounded" style="background: rgba(255,255,255,0.1);">
+                                    <h4 class="text-warning">🔥 A01: 6.05/10</h4>
+                                    <p class="mb-0"><strong>"Thảm họa"</strong><br>
+                                    Toán+Anh = "Kẻ hủy diệt"</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 rounded" style="background: rgba(255,255,255,0.1);">
+                                    <h4 class="text-info">⚡ D01: 5.59/10</h4>
+                                    <p class="mb-0"><strong>"Biến động mạnh"</strong><br>
+                                    Văn dễ vs Toán+Anh khó</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center p-3 rounded" style="background: rgba(255,255,255,0.1);">
+                                    <h4 class="text-success">🛡️ A00: 3.09/10</h4>
+                                    <p class="mb-0"><strong>"Lý dễ thở"</strong><br>
+                                    Giúp bù đắp Toán khó</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <p class="mb-2"><strong>Statistical Validation:</strong> ANOVA F=1029.716, p&lt;0.001 ✅</p>
+                            <small class="text-white-50">
+                                <i class="fas fa-info-circle"></i> 
+                                Dự báo dựa trên composite difficulty score = f(avg_score, pct_below5, std_dev, sentiment)
+                            </small>
+                        </div>
+                    </div>
+                    
                     <div class="row mt-5 g-4">
                         <div class="col-md-4">
                             <div class="text-center p-4 bg-light rounded-3">
@@ -663,38 +712,69 @@
                                                 <h6 class="mb-0"><i class="fas fa-exclamation-circle me-2"></i>Điểm Mới Cần Lưu ý</h6>
                                             </div>
                                             <div class="card-body">
-                                                <ul class="list-unstyled mb-0">
-                                                    <li class="mb-2">
-                                                        <i class="fas fa-times-circle text-danger me-2"></i>
-                                                        <strong>Bỏ hoàn toàn</strong> điểm khuyến khích
-                                                    </li>
-                                                    <li class="mb-2">
-                                                        <i class="fas fa-percentage text-info me-2"></i>
-                                                        <strong>50% điểm học bạ</strong> + 50% điểm thi
-                                                    </li>
-                                                    <li class="mb-2">
-                                                        <i class="fas fa-book-open text-info me-2"></i>
-                                                        <strong>Đề thi chuẩn hóa</strong> theo PISA
-                                                    </li>
-                                                    <li class="mb-0">
-                                                        <i class="fas fa-chart-line text-info me-2"></i>
-                                                        <strong>Tăng cường</strong> tư duy phản biện
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="demo-card p-4 bg-white rounded-3 shadow-sm h-100">
+                                <div class="mb-3">
+                                    <i class="fab fa-github fa-2x text-primary"></i>
                                 </div>
+                                <h4 class="fw-bold">📊 Data Analysis</h4>
+                                <p class="text-muted">
+                                    Notebook phân tích dữ liệu thực tế 2018-2024
+                                </p>
+                                <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/thpt_analysis_demo.ipynb" 
+                                   class="btn-custom" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>Xem Notebook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="demo-card p-4 bg-white rounded-3 shadow-sm h-100">
+                                <div class="mb-3">
+                                    <i class="fas fa-brain fa-2x text-warning"></i>
+                                </div>
+                                <h4 class="fw-bold">🔮 Insight 2025</h4>
+                                <p class="text-muted">
+                                    Framework phân tích độ khó với statistical validation
+                                </p>
+                                <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/insight_difficulty_analysis.ipynb" 
+                                   class="btn btn-warning text-white" target="_blank">
+                                    <i class="fas fa-chart-line me-2"></i>Demo Insight
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="demo-card p-4 bg-white rounded-3 shadow-sm h-100">
+                                <div class="mb-3">
+                                    <i class="fas fa-download fa-2x text-success"></i>
+                                </div>
+                                <h4 class="fw-bold">💾 Source Code</h4>
+                                <p class="text-muted">
+                                    Download toàn bộ source code và dữ liệu
+                                </p>
+                                <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025/archive/refs/heads/main.zip" 
+                                   class="btn btn-success">
+                                    <i class="fas fa-download me-2"></i>Download ZIP
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section id="demo" class="stats-section">
+                    
+                    <!-- Colab badges -->
+                    <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="step mb-3">
+                                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">3</div>
+                                    <span>Phân tích: <code>python src/main.py --mode analyze</code></span>
+                                </div>
+                                <div class="step mb-3">
+                                    <div class="step-number bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">4</div>
+                                    <span>Insight: <code>python src/main.py --mode insight</code></span>
+                                </div>
+                            </div>
+                    </div>ss="stats-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">

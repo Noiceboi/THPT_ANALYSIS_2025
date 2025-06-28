@@ -1,4 +1,37 @@
-# 🎓 THPT Analysis 2025 - Nghiên cứu So sánh các Tổ hợp Môn
+# 🎓 THPT Analysi## 🌟 Demo Live
+👉 **[Xem Demo trực tiếp tại GitHub Pages](https://noiceboi.github.io/THPT_ANALYSIS_2025/)**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Noiceboi/THPT_ANALYSIS_2025/blob/master/notebooks/thpt_analysis_demo.ipynb) **📊 Phân tích dữ liệu thực tế 2018-2024**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Noiceboi/THPT_ANALYSIS_2025/blob/master/notebooks/insight_difficulty_analysis.ipynb) **🔮 Framework insight 2025**
+
+---
+
+## 🚨 **QUAN TRỌNG: Phân biệt rõ ràng**
+
+### 📊 **PHẦN I: DỮ LIỆU THỐNG KÊ THỰC TẾ (2018-2024)**
+> ✅ **Nghiên cứu khoa học** dựa trên dữ liệu chính thức từ Bộ GD-ĐT
+
+**Methodology:**
+- 📈 **52 records** điểm chuẩn chính thức qua 7 năm
+- 🔬 **Statistical analysis:** Linear Regression, T-test, ANOVA, K-means 
+- 📊 **Data-driven conclusions** với p-value validation
+
+### 🔮 **PHẦN II: INSIGHT FRAMEWORK 2025**
+> ⚠️ **PREDICTION MODEL** - Không phải dữ liệu thực tế, chỉ mang tính dự báo
+
+**Composite Difficulty Score Framework:**
+```python
+difficulty = f(avg_score, pct_below5, std_dev, media_sentiment)
+# Weighted by insight: Toán(0.4) + Anh(0.4) = "Kẻ hủy diệt"
+```
+
+#### 🎯 **Key Insights Validated:**
+- 🔥 **A01** (Toán-Lý-Anh): **6.05/10** - "Thảm họa" confirmed
+- ⚡ **D01** (Văn-Toán-Anh): **5.59/10** - "Biến động mạnh" 
+- 🛡️ **A00** (Toán-Lý-Hóa): **3.09/10** - "Lý dễ thở" giúp giảm tải
+
+**Statistical Validation:** ANOVA F=1029.716, p<0.001 ✅- Nghiên cứu So sánh các Tổ hợp Môn
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org/)
@@ -73,28 +106,35 @@ Nghiên cứu **so sánh chuyên sâu các tổ hợp môn** sử dụng:
 ### 🔮 **Dự đoán 2025 (Không chính thức)**
 - 📰 **Dư luận:** Phản ánh từ thí sinh, giáo viên
 - 📺 **Media:** Báo chí, chuyên gia giáo dục  
-- 🎓 **Ý kiến:** Giảng viên các trường ĐH
-- ⚠️ **Lưu ý:** Chờ dữ liệu chính thức để kiểm chứng
+### **Cách 1: Chạy Notebook (Khuyến nghị)**
+```bash
+git clone https://github.com/Noiceboi/THPT_ANALYSIS_2025.git
+cd THPT_ANALYSIS_2025
+pip install -r requirements.txt
 
----
+# Data analysis với dữ liệu thực tế
+jupyter notebook notebooks/thpt_analysis_demo.ipynb
 
-## 🏗️ Cấu trúc Dự án
-
+# Insight framework 2025 
+jupyter notebook notebooks/insight_difficulty_analysis.ipynb
 ```
-THPT_Analysis_Project/
-├── src/                    # 🐍 Mã nguồn Python
-│   ├── data_scraper.py     # Thu thập dữ liệu web
-│   ├── data_analyzer.py    # Phân tích thống kê
-│   └── main.py            # Orchestrator chính
-├── data/                   # 📊 Dữ liệu thực tế
-│   ├── raw/               # CSV files (2018-2024)
-│   ├── processed/         # Cleaned data
-│   └── thpt_data.db      # SQLite database
-├── notebooks/             # 📓 Jupyter Analysis
-│   └── thpt_analysis_demo.ipynb
-├── output/                # 📈 Kết quả
-│   ├── reports/          # HTML/Markdown reports
-│   ├── charts/           # Plotly interactive charts
+
+### **Cách 2: CLI Pipeline**
+```bash
+# 📊 Phân tích dữ liệu thực tế 2018-2024
+python src/main.py --mode analyze
+
+# 🔮 Insight framework 2025 (NEW!)
+python src/main.py --mode insight
+
+# � Pipeline đầy đủ
+python src/main.py --mode full
+```
+
+### **Cách 3: Google Colab (Không cần cài đặt)**
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/thpt_analysis_demo.ipynb) **� Data Analysis**
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/insight_difficulty_analysis.ipynb) **🔮 Insight Framework**
 │   └── tables/           # CSV summary tables
 ├── docs/                  # 🌐 GitHub Pages website
 │   └── index.html        # Demo website
