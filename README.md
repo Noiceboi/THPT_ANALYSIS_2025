@@ -27,9 +27,8 @@ difficulty = f(avg_score, pct_below5, std_dev, media_sentiment)
 ```
 
 #### 🎯 **Key Insights Validated:**
-- 🔥 **A01** (Toán-Lý-Anh): **6.05/10** - "Thảm họa" confirmed
-- ⚡ **D01** (Văn-Toán-Anh): **5.59/10** - "Biến động mạnh" 
-- 🛡️ **A00** (Toán-Lý-Hóa): **3.09/10** - "Lý dễ thở" giúp giảm tải
+- 🔥 **A01** (Toán-Lý-Anh): **6.05/10** - "Thảm họa" confirmed  
+- ⚡ **D01** (Văn-Toán-Anh): **5.59/10** - "Biến động mạnh"
 
 **Statistical Validation:** ANOVA F=1029.716, p<0.001 ✅- Nghiên cứu So sánh các Tổ hợp Môn
 
@@ -84,7 +83,6 @@ difficulty = f(avg_score, pct_below5, std_dev, media_sentiment)
 | Tổ hợp | Dự báo 2025 | So với 2024 | Mức độ tác động |
 |--------|-------------|-------------|-----------------|
 | **A01** | **6.3 ± 1.4** | ↘️ **-0.8 điểm** | 🔴 **NẶNG** |
-| **A00** | **6.2 ± 1.3** | ↘️ **-0.7 điểm** | 🔴 **NẶNG** |
 | **D01** | **6.1 ± 1.2** | ↘️ **-0.7 điểm** | 🟡 **Trung bình** |
 | **B01** | **5.9 ± 1.4** | ↘️ **-0.6 điểm** | 🟡 **Trung bình** |
 
