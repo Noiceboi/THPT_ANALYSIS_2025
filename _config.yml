@@ -3,8 +3,7 @@ description: Nghiên cứu So sánh các Tổ hợp Môn THPT - Dự báo Điể
 author: THPT Analysis Team
 url: https://noiceboi.github.io/THPT_ANALYSIS_2025/
 
-# GitHub Pages configuration
-theme: minima
+# GitHub Pages configuration - Use root index.html
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -13,7 +12,7 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
-# Exclude files
+# Exclude files from build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -23,11 +22,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - src/
-  - notebooks/
   - config/
   - requirements.txt
-  - README.md
-
-# Include files
-include:
-  - docs/
+  - setup.py
+  - CONTRIBUTING.md

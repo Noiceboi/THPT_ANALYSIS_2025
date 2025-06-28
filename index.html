@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THPT Analysis 2025 - Nghiên cứu So sánh các Tổ hợp Môn</title>
+    <meta name="description" content="Nghiên cứu chuyên sâu về sự khác biệt giữa các tổ hợp môn trong kỳ thi THPT quốc gia 2018-2024">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --success-color: #059669;
+            --danger-color: #dc2626;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(118, 75, 162, 0.9));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .stats-section {
+            background: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+        }
+        
+        .stat-label {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        
+        .demo-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .btn-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+            color: white;
+        }
+        
+        .results-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .table th {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .table td {
+            padding: 15px;
+            border-color: #e2e8f0;
+        }
+        
+        .badge-difficulty {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .difficulty-hard {
+            background: #fecaca;
+            color: #dc2626;
+        }
+        
+        .difficulty-medium {
+            background: #fed7aa;
+            color: #ea580c;
+        }
+        
+        .difficulty-easy {
+            background: #bbf7d0;
+            color: #059669;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-chart-line text-primary me-2"></i>
+                THPT Analysis 2025
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#overview">Tổng quan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#results">Kết quả</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#demo">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Noiceboi/THPT_ANALYSIS_2025" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">
+                        Nghiên cứu So sánh các Tổ hợp Môn THPT
+                    </h1>
+                    <p class="lead mb-4">
+                        Phân tích chuyên sâu <strong>8 tổ hợp môn</strong> chính trong kỳ thi THPT quốc gia từ 2018-2024 
+                        bằng phương pháp thống kê và machine learning
+                    </p>
+                    <div class="alert alert-warning bg-warning bg-opacity-10 border-warning mb-4">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-exclamation-triangle text-warning me-3 fs-4"></i>
+                            <div>
+                                <strong>Cập nhật 2025:</strong> Dự báo điểm chuẩn giảm mạnh do đề thi khó, 
+                                đặc biệt môn Toán và Tiếng Anh. Phổ điểm dịch chuyển về 5.5-6 điểm.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#demo" class="btn-custom">
+                            <i class="fas fa-play me-2"></i>Xem Demo
+                        </a>
+                        <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025" class="btn btn-outline-light">
+                            <i class="fab fa-github me-2"></i>Source Code
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <i class="fas fa-chart-bar" style="font-size: 200px; opacity: 0.3;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">8</span>
+                        <div class="stat-label">Tổ hợp Môn</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">270+</span>
+                        <div class="stat-label">Bản ghi Dữ liệu</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">7</span>
+                        <div class="stat-label">Năm Phân tích</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="stat-card">
+                        <span class="stat-number">5</span>
+                        <div class="stat-label">Loại Phân tích</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="display-5 fw-bold text-white mb-4">Tổng quan Phân tích</h2>
+                    <p class="lead text-white-50">
+                        Sử dụng các phương pháp thống kê tiên tiến để khám phá những điểm khác biệt quan trọng
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Độ Phổ biến & Xu hướng</h4>
+                        <p class="text-muted">
+                            Phân tích số lượng ngành sử dụng và xu hướng điểm chuẩn của từng tổ hợp qua 7 năm
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">Linear Regression • Time Series</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-ranking-star"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Xếp hạng Độ khó</h4>
+                        <p class="text-muted">
+                            Đánh giá độ khó dựa trên điểm trung bình, độ lệch chuẩn và điểm chuẩn
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">Z-score Normalization • Composite Scoring</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">So sánh Vùng miền</h4>
+                        <p class="text-muted">
+                            Kiểm định thống kê sự khác biệt điểm chuẩn giữa Miền Bắc và Miền Nam
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">T-test • ANOVA • P-value</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Phân cụm Tổ hợp</h4>
+                        <p class="text-muted">
+                            Nhóm các tổ hợp có đặc điểm tương tự bằng thuật toán K-means
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">K-means Clustering • Standardization</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Dashboard Tương tác</h4>
+                        <p class="text-muted">
+                            Trực quan hóa dữ liệu với biểu đồ tương tác và dashboard tổng hợp
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">Plotly • Interactive Charts • 3D Visualization</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Insights Khoa học</h4>
+                        <p class="text-muted">
+                            Rút ra những kết luận có giá trị thực tiễn cho thí sinh và nhà giáo dục
+                        </p>
+                        <div class="mt-3">
+                            <small class="text-primary fw-bold">Evidence-based • Actionable Insights</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="demo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-4">Kết quả Nghiên cứu Chính</h2>
+                        <p class="lead text-muted">
+                            Những phát hiện quan trọng từ việc phân tích 270+ bản ghi dữ liệu
+                        </p>
+                    </div>
+                    
+                    <div class="results-table">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Tổ hợp</th>
+                                    <th>Môn học</th>
+                                    <th>Độ phổ biến</th>
+                                    <th>Xu hướng</th>
+                                    <th>Độ khó</th>
+                                    <th>Nhóm đặc trưng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>A01</strong></td>
+                                    <td>Toán + Lý + Anh</td>
+                                    <td>🥇 #1 (36 ngành)</td>
+                                    <td><span class="text-danger">↘️ Giảm (-0.15/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-hard">Khó</span></td>
+                                    <td>Cạnh tranh cao</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>C01</strong></td>
+                                    <td>Văn + Toán + Lý</td>
+                                    <td>🥈 #2 (30 ngành)</td>
+                                    <td><span class="text-danger">↘️ Giảm (-0.15/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-medium">Trung bình</span></td>
+                                    <td>Đa năng</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>A00</strong></td>
+                                    <td>Toán + Lý + Hóa</td>
+                                    <td>🥉 #3 (29 ngành)</td>
+                                    <td><span class="text-success">↗️ Tăng (+0.54/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-medium">Trung bình</span></td>
+                                    <td>Kỹ thuật truyền thống</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>D01</strong></td>
+                                    <td>Văn + Toán + Anh</td>
+                                    <td>#4 (28 ngành)</td>
+                                    <td><span class="text-success">↗️ Tăng (+0.15/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-easy">Dễ</span></td>
+                                    <td>Kinh tế - Quản trị</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>B00</strong></td>
+                                    <td>Toán + Hóa + Sinh</td>
+                                    <td>#5 (24 ngành)</td>
+                                    <td><span class="text-danger">↘️ Giảm mạnh (-1.22/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-hard">Khó nhất</span></td>
+                                    <td>Y - Dược</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>B01</strong></td>
+                                    <td>Toán + Sinh + Anh</td>
+                                    <td>#6 (18 ngành)</td>
+                                    <td><span class="text-success">↗️ Tăng mạnh (+0.57/năm)</span></td>
+                                    <td><span class="badge-difficulty difficulty-medium">Trung bình</span></td>
+                                    <td>Y học quốc tế</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="row mt-5 g-4">
+                        <div class="col-md-4">
+                            <div class="text-center p-4 bg-light rounded-3">
+                                <h3 class="text-primary fw-bold">A01</h3>
+                                <p class="mb-0">Tổ hợp <strong>phổ biến nhất</strong><br>
+                                36 ngành sử dụng</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4 bg-light rounded-3">
+                                <h3 class="text-danger fw-bold">B00</h3>
+                                <p class="mb-0">Tổ hợp <strong>khó nhất</strong><br>
+                                Điểm chuẩn cao nhất</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center p-4 bg-light rounded-3">
+                                <h3 class="text-success fw-bold">B01</h3>
+                                <p class="mb-0">Xu hướng <strong>tăng mạnh</strong><br>
+                                +0.57 điểm/năm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2025 Update Alert -->
+    <section class="py-5" style="background: linear-gradient(135deg, #fef3c7, #fbbf24);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-warning border-0 shadow-lg p-4" style="background: rgba(255, 255, 255, 0.9); border-radius: 20px;">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-exclamation-triangle fa-2x text-warning me-3"></i>
+                            <h3 class="fw-bold mb-0 text-dark">🚨 CẬP NHẬT QUAN TRỌNG: KỲ THI THPTQG 2025</h3>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <h5 class="fw-bold text-danger mb-3">
+                                    <i class="fas fa-chart-line-down me-2"></i>Dự báo Điểm Chuẩn Giảm Mạnh
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-arrow-down text-danger me-2"></i>
+                                        <strong>Toán:</strong> Phổ điểm dịch chuyển về 5.5-6 (thay vì 6-7)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-arrow-down text-danger me-2"></i>
+                                        <strong>Tiếng Anh:</strong> Độ khó ngang IELTS, số điểm cao 8-10 giảm mạnh
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-arrow-down text-danger me-2"></i>
+                                        <strong>Tổ hợp A01, A00:</strong> Chịu tác động nặng nhất
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="fw-bold text-primary mb-3">
+                                    <i class="fas fa-sync-alt me-2"></i>Thay Đổi Cấu Trúc Kỳ Thi
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-calendar-minus text-primary me-2"></i>
+                                        Giảm từ <strong>4 buổi → 3 buổi</strong> thi (26-27/6/2025)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-book text-primary me-2"></i>
+                                        Chỉ thi <strong>4 môn</strong> (2 bắt buộc + 2 tự chọn)
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-percentage text-primary me-2"></i>
+                                        Điểm học bạ tăng lên <strong>50%</strong>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-ban text-primary me-2"></i>
+                                        <strong>Loại bỏ</strong> hoàn toàn điểm khuyến khích
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4 mb-0" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3);">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-lightbulb text-info me-2"></i>
+                                <div>
+                                    <strong>Gợi ý chiến lược:</strong> Với dự báo điểm chuẩn giảm, thí sinh nên cân nhắc lại danh sách nguyện vọng, 
+                                    tập trung vào 2 môn tự chọn mạnh nhất, và chú trọng điểm học bạ 3 năm THPT.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Chi tiết dự báo từng tổ hợp -->
+                        <div class="row g-4 mt-3">
+                            <div class="col-md-12">
+                                <h5 class="fw-bold text-dark mb-3">📊 Dự báo Chi tiết Điểm Chuẩn 2025 (So với 2024)</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th>Tổ hợp</th>
+                                                <th>Điểm TB 2024</th>
+                                                <th>Dự báo 2025</th>
+                                                <th>Mức độ Tác động</th>
+                                                <th>Lý do</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-danger">
+                                                <td><strong>A01</strong></td>
+                                                <td>7.1 ± 1.2</td>
+                                                <td><strong>6.3 ± 1.4</strong></td>
+                                                <td><span class="badge bg-danger">Nặng</span></td>
+                                                <td>Toán + Anh khó</td>
+                                            </tr>
+                                            <tr class="table-danger">
+                                                <td><strong>A00</strong></td>
+                                                <td>6.9 ± 1.1</td>
+                                                <td><strong>6.2 ± 1.3</strong></td>
+                                                <td><span class="badge bg-danger">Nặng</span></td>
+                                                <td>Toán khó ảnh hưởng mạnh</td>
+                                            </tr>
+                                            <tr class="table-warning">
+                                                <td><strong>D01</strong></td>
+                                                <td>6.8 ± 1.0</td>
+                                                <td><strong>6.1 ± 1.2</strong></td>
+                                                <td><span class="badge bg-warning text-dark">Trung bình</span></td>
+                                                <td>Văn + Toán + Anh</td>
+                                            </tr>
+                                            <tr class="table-warning">
+                                                <td><strong>B01</strong></td>
+                                                <td>6.5 ± 1.3</td>
+                                                <td><strong>5.9 ± 1.4</strong></td>
+                                                <td><span class="badge bg-warning text-dark">Trung bình</span></td>
+                                                <td>Toán khó</td>
+                                            </tr>
+                                            <tr class="table-success">
+                                                <td><strong>C00</strong></td>
+                                                <td>6.2 ± 1.2</td>
+                                                <td><strong>6.0 ± 1.2</strong></td>
+                                                <td><span class="badge bg-success">Nhẹ</span></td>
+                                                <td>Không có Toán/Anh</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="alert alert-success mt-3" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3);">
+                                    <i class="fas fa-info-circle text-success me-2"></i>
+                                    <strong>Cơ hội đặc biệt:</strong> Các trường có thể hạ điểm chuẩn 0.5-1.0 điểm để đảm bảo chỉ tiêu tuyển sinh.
+                                </div>
+                                
+                                <!-- Timeline và Lịch trình 2025 -->
+                                <div class="row g-4 mt-4">
+                                    <div class="col-md-6">
+                                        <div class="card border-primary">
+                                            <div class="card-header bg-primary text-white">
+                                                <h6 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>Lịch trình Quan trọng 2025</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-clock text-primary me-2"></i>
+                                                        <strong>Tháng 3/2025:</strong> Đăng ký dự thi
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-calendar-check text-primary me-2"></i>
+                                                        <strong>26-27/6/2025:</strong> Thi THPTQG (3 buổi)
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-file-alt text-primary me-2"></i>
+                                                        <strong>Tháng 7/2025:</strong> Công bố kết quả
+                                                    </li>
+                                                    <li class="mb-0">
+                                                        <i class="fas fa-graduation-cap text-primary me-2"></i>
+                                                        <strong>Tháng 8/2025:</strong> Xét tuyển ĐH
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-info">
+                                            <div class="card-header bg-info text-white">
+                                                <h6 class="mb-0"><i class="fas fa-exclamation-circle me-2"></i>Điểm Mới Cần Lưu ý</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-times-circle text-danger me-2"></i>
+                                                        <strong>Bỏ hoàn toàn</strong> điểm khuyến khích
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-percentage text-info me-2"></i>
+                                                        <strong>50% điểm học bạ</strong> + 50% điểm thi
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-book-open text-info me-2"></i>
+                                                        <strong>Đề thi chuẩn hóa</strong> theo PISA
+                                                    </li>
+                                                    <li class="mb-0">
+                                                        <i class="fas fa-chart-line text-info me-2"></i>
+                                                        <strong>Tăng cường</strong> tư duy phản biện
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-4">Khám phá Demo Tương tác</h2>
+                    <p class="lead text-muted mb-5">
+                        Trải nghiệm notebook Jupyter với phân tích chuyên sâu và biểu đồ tương tác
+                    </p>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="demo-card p-4 bg-white rounded-3 shadow-sm h-100">
+                                <div class="mb-3">
+                                    <i class="fab fa-github fa-2x text-primary"></i>
+                                </div>
+                                <h4 class="fw-bold">Jupyter Notebook</h4>
+                                <p class="text-muted">
+                                    Notebook hoàn chỉnh với code, phân tích và kết quả
+                                </p>
+                                <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/thpt_analysis_demo.ipynb" 
+                                   class="btn-custom" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>Xem Notebook
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="demo-card p-4 bg-white rounded-3 shadow-sm h-100">
+                                <div class="mb-3">
+                                    <i class="fas fa-download fa-2x text-success"></i>
+                                </div>
+                                <h4 class="fw-bold">Source Code</h4>
+                                <p class="text-muted">
+                                    Download toàn bộ source code và dữ liệu
+                                </p>
+                                <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025/archive/refs/heads/main.zip" 
+                                   class="btn btn-success">
+                                    <i class="fas fa-download me-2"></i>Download ZIP
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-instructions p-4 bg-white rounded-3 shadow-sm text-start">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-rocket text-primary me-2"></i>Hướng dẫn Quick Start
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="step mb-3">
+                                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">1</div>
+                                    <span>Clone repository: <code>git clone https://github.com/Noiceboi/THPT_ANALYSIS_2025.git</code></span>
+                                </div>
+                                <div class="step mb-3">
+                                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">2</div>
+                                    <span>Cài đặt: <code>pip install -r requirements.txt</code></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="step mb-3">
+                                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">3</div>
+                                    <span>Chạy: <code>python src/main.py --mode full</code></span>
+                                </div>
+                                <div class="step mb-3">
+                                    <div class="step-number bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" 
+                                         style="width: 30px; height: 30px; font-weight: bold; font-size: 14px;">4</div>
+                                    <span>Mở notebook: <code>jupyter notebook</code></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h5 class="fw-bold mb-3">THPT Analysis 2025</h5>
+                    <p class="text-secondary mb-3">
+                        Nghiên cứu khoa học về giáo dục THPT với phương pháp data science
+                    </p>
+                    
+                    <!-- Version info with 2025 updates -->
+                    <div class="alert alert-info d-inline-block mb-4" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 15px;">
+                        <small class="text-primary fw-bold">
+                            <i class="fas fa-sync-alt me-1"></i>
+                            Version 2.0 - Cập nhật kỳ thi THPTQG 2025 | 
+                            <i class="fas fa-calendar-alt me-1"></i>
+                            Dự báo điểm chuẩn giảm | 
+                            <i class="fas fa-chart-line-down me-1"></i>
+                            Phân tích xu hướng mới
+                        </small>
+                    </div>
+                    
+                    <div class="social-links mb-4">
+                        <a href="https://github.com/Noiceboi/THPT_ANALYSIS_2025" target="_blank" title="GitHub Repository">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://colab.research.google.com/github/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/thpt_analysis_demo.ipynb" target="_blank" title="Google Colab">
+                            <i class="fas fa-play-circle"></i>
+                        </a>
+                        <a href="https://nbviewer.org/github/Noiceboi/THPT_ANALYSIS_2025/blob/main/notebooks/thpt_analysis_demo.ipynb" target="_blank" title="NBViewer">
+                            <i class="fas fa-book-open"></i>
+                        </a>
+                        <a href="mailto:contact@thptanalysis.com" target="_blank" title="Email Contact">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <hr class="my-4" style="opacity: 0.3;">
+                    <div class="row">
+                        <div class="col-md-4 text-md-start text-center">
+                            <small class="text-secondary">
+                                © 2025 THPT Analysis. All rights reserved.
+                            </small>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <small class="text-secondary">
+                                <i class="fas fa-heart text-danger"></i> Made with Python & Jupyter
+                            </small>
+                        </div>
+                        <div class="col-md-4 text-md-end text-center">
+                            <small class="text-secondary">
+                                <i class="fas fa-clock"></i> Cập nhật: Tháng 1/2025
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+        
+        // Counter animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 20);
+        }
+        
+        // Trigger counter animation when in view
+        const observerOptions = {
+            threshold: 0.7
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.textContent.replace('+', ''));
+                        if (!isNaN(target)) {
+                            animateCounter(counter, target);
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
