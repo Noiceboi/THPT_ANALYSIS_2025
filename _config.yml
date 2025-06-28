@@ -1,0 +1,33 @@
+title: THPT Analysis 2025
+description: Nghiên cứu So sánh các Tổ hợp Môn THPT - Dự báo Điểm Chuẩn 2025
+author: THPT Analysis Team
+url: https://noiceboi.github.io/THPT_ANALYSIS_2025/
+
+# GitHub Pages configuration
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - src/
+  - notebooks/
+  - config/
+  - requirements.txt
+  - README.md
+
+# Include files
+include:
+  - docs/
