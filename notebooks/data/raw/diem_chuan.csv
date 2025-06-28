@@ -1,0 +1,211 @@
+﻿nam,truong,nganh,ma_to_hop,diem_chuan,chi_tieu,vung_mien,ngay_cap_nhat
+2018,Đại học Bách khoa Hà Nội,Sư phạm Toán,C01,21.88,100,Miền Bắc,2025-06-28
+2018,Đại học Bách khoa Hà Nội,Quản trị kinh doanh,D02,29.04,342,Miền Bắc,2025-06-28
+2018,Đại học Bách khoa Hà Nội,Kinh tế,A00,23.61,181,Miền Bắc,2025-06-28
+2018,Đại học Quốc gia Hà Nội,Công nghệ thông tin,C01,26.93,210,Miền Bắc,2025-06-28
+2018,Đại học Quốc gia Hà Nội,Sư phạm Toán,C00,28.52,347,Miền Bắc,2025-06-28
+2018,Đại học Quốc gia Hà Nội,Ngôn ngữ Anh,A01,27.37,218,Miền Bắc,2025-06-28
+2018,Đại học Kinh tế Quốc dân,Dược học,A01,28.65,140,Miền Nam,2025-06-28
+2018,Đại học Kinh tế Quốc dân,Công nghệ thông tin,A01,22.79,352,Miền Nam,2025-06-28
+2018,Đại học Kinh tế Quốc dân,Sư phạm Toán,C01,24.02,452,Miền Nam,2025-06-28
+2018,Đại học Y Hà Nội,Luật,D02,27.99,77,Miền Bắc,2025-06-28
+2018,Đại học Y Hà Nội,Dược học,D01,23.94,361,Miền Bắc,2025-06-28
+2018,Đại học Y Hà Nội,Kỹ thuật máy tính,C01,26.6,417,Miền Bắc,2025-06-28
+2018,Đại học Sư phạm Hà Nội,Kinh tế,C00,21.6,174,Miền Bắc,2025-06-28
+2018,Đại học Sư phạm Hà Nội,Kỹ thuật máy tính,D02,29.45,117,Miền Bắc,2025-06-28
+2018,Đại học Sư phạm Hà Nội,Y khoa,C00,19.05,477,Miền Bắc,2025-06-28
+2018,Đại học Bách khoa TP.HCM,Công nghệ thông tin,B01,18.94,352,Miền Nam,2025-06-28
+2018,Đại học Bách khoa TP.HCM,Ngôn ngữ Anh,B01,20.11,479,Miền Nam,2025-06-28
+2018,Đại học Bách khoa TP.HCM,Quản trị kinh doanh,B01,25.03,343,Miền Nam,2025-06-28
+2018,Đại học Quốc gia TP.HCM,Kỹ thuật máy tính,C00,21.12,124,Miền Nam,2025-06-28
+2018,Đại học Quốc gia TP.HCM,Luật,A01,26.58,307,Miền Nam,2025-06-28
+2018,Đại học Quốc gia TP.HCM,Ngôn ngữ Anh,D01,23.82,315,Miền Nam,2025-06-28
+2018,Đại học Kinh tế TP.HCM,Công nghệ thông tin,D02,25.8,91,Miền Nam,2025-06-28
+2018,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,C01,21.2,353,Miền Nam,2025-06-28
+2018,Đại học Kinh tế TP.HCM,Kinh tế,B00,28.44,486,Miền Nam,2025-06-28
+2018,Đại học Y Dược TP.HCM,Sư phạm Toán,A00,27.44,209,Miền Nam,2025-06-28
+2018,Đại học Y Dược TP.HCM,Dược học,A00,20.97,276,Miền Nam,2025-06-28
+2018,Đại học Y Dược TP.HCM,Kỹ thuật máy tính,C01,20.31,77,Miền Nam,2025-06-28
+2018,Đại học Sư phạm TP.HCM,Sư phạm Toán,C00,22.46,285,Miền Nam,2025-06-28
+2018,Đại học Sư phạm TP.HCM,Kỹ thuật máy tính,C01,21.57,140,Miền Nam,2025-06-28
+2018,Đại học Sư phạm TP.HCM,Dược học,A01,21.35,386,Miền Nam,2025-06-28
+2019,Đại học Bách khoa Hà Nội,Sư phạm Toán,D01,28.88,203,Miền Bắc,2025-06-28
+2019,Đại học Bách khoa Hà Nội,Ngôn ngữ Anh,C00,24.38,370,Miền Bắc,2025-06-28
+2019,Đại học Bách khoa Hà Nội,Công nghệ thông tin,D01,28.72,397,Miền Bắc,2025-06-28
+2019,Đại học Quốc gia Hà Nội,Luật,A00,19.81,248,Miền Bắc,2025-06-28
+2019,Đại học Quốc gia Hà Nội,Dược học,A01,28.03,100,Miền Bắc,2025-06-28
+2019,Đại học Quốc gia Hà Nội,Công nghệ thông tin,C01,21.37,230,Miền Bắc,2025-06-28
+2019,Đại học Kinh tế Quốc dân,Quản trị kinh doanh,A01,24.98,443,Miền Nam,2025-06-28
+2019,Đại học Kinh tế Quốc dân,Sư phạm Toán,B00,28.9,477,Miền Nam,2025-06-28
+2019,Đại học Kinh tế Quốc dân,Ngôn ngữ Anh,A00,21.02,464,Miền Nam,2025-06-28
+2019,Đại học Y Hà Nội,Ngôn ngữ Anh,D01,22.86,165,Miền Bắc,2025-06-28
+2019,Đại học Y Hà Nội,Dược học,C01,19.34,494,Miền Bắc,2025-06-28
+2019,Đại học Y Hà Nội,Kỹ thuật máy tính,D01,19.46,459,Miền Bắc,2025-06-28
+2019,Đại học Sư phạm Hà Nội,Y khoa,D01,20.21,367,Miền Bắc,2025-06-28
+2019,Đại học Sư phạm Hà Nội,Ngôn ngữ Anh,C01,27.81,474,Miền Bắc,2025-06-28
+2019,Đại học Sư phạm Hà Nội,Kinh tế,D01,21.16,88,Miền Bắc,2025-06-28
+2019,Đại học Bách khoa TP.HCM,Kỹ thuật máy tính,C01,26.76,165,Miền Nam,2025-06-28
+2019,Đại học Bách khoa TP.HCM,Dược học,A01,18.35,477,Miền Nam,2025-06-28
+2019,Đại học Bách khoa TP.HCM,Y khoa,B00,25.07,53,Miền Nam,2025-06-28
+2019,Đại học Quốc gia TP.HCM,Kinh tế,D02,25.79,206,Miền Nam,2025-06-28
+2019,Đại học Quốc gia TP.HCM,Kỹ thuật máy tính,C00,22.12,183,Miền Nam,2025-06-28
+2019,Đại học Quốc gia TP.HCM,Ngôn ngữ Anh,C00,26.05,53,Miền Nam,2025-06-28
+2019,Đại học Kinh tế TP.HCM,Dược học,A00,24.67,151,Miền Nam,2025-06-28
+2019,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,D01,24.58,398,Miền Nam,2025-06-28
+2019,Đại học Kinh tế TP.HCM,Luật,D01,24.64,373,Miền Nam,2025-06-28
+2019,Đại học Y Dược TP.HCM,Kỹ thuật máy tính,D01,25.79,203,Miền Nam,2025-06-28
+2019,Đại học Y Dược TP.HCM,Sư phạm Toán,B00,20.25,260,Miền Nam,2025-06-28
+2019,Đại học Y Dược TP.HCM,Ngôn ngữ Anh,B01,19.56,219,Miền Nam,2025-06-28
+2019,Đại học Sư phạm TP.HCM,Quản trị kinh doanh,A00,18.17,98,Miền Nam,2025-06-28
+2019,Đại học Sư phạm TP.HCM,Ngôn ngữ Anh,A01,28.08,82,Miền Nam,2025-06-28
+2019,Đại học Sư phạm TP.HCM,Dược học,C01,29.16,350,Miền Nam,2025-06-28
+2020,Đại học Bách khoa Hà Nội,Công nghệ thông tin,A01,22.96,341,Miền Bắc,2025-06-28
+2020,Đại học Bách khoa Hà Nội,Ngôn ngữ Anh,C00,21.98,479,Miền Bắc,2025-06-28
+2020,Đại học Bách khoa Hà Nội,Sư phạm Toán,D01,18.02,312,Miền Bắc,2025-06-28
+2020,Đại học Quốc gia Hà Nội,Sư phạm Toán,D02,18.79,272,Miền Bắc,2025-06-28
+2020,Đại học Quốc gia Hà Nội,Kỹ thuật máy tính,B01,26.95,180,Miền Bắc,2025-06-28
+2020,Đại học Quốc gia Hà Nội,Y khoa,A01,27.58,375,Miền Bắc,2025-06-28
+2020,Đại học Kinh tế Quốc dân,Công nghệ thông tin,A01,22.13,438,Miền Nam,2025-06-28
+2020,Đại học Kinh tế Quốc dân,Quản trị kinh doanh,D02,28.84,135,Miền Nam,2025-06-28
+2020,Đại học Kinh tế Quốc dân,Luật,D01,21.66,244,Miền Nam,2025-06-28
+2020,Đại học Y Hà Nội,Công nghệ thông tin,D02,24.75,254,Miền Bắc,2025-06-28
+2020,Đại học Y Hà Nội,Luật,A00,25.66,221,Miền Bắc,2025-06-28
+2020,Đại học Y Hà Nội,Y khoa,A00,19.36,347,Miền Bắc,2025-06-28
+2020,Đại học Sư phạm Hà Nội,Kinh tế,B01,21.55,270,Miền Bắc,2025-06-28
+2020,Đại học Sư phạm Hà Nội,Công nghệ thông tin,A01,25.58,479,Miền Bắc,2025-06-28
+2020,Đại học Sư phạm Hà Nội,Quản trị kinh doanh,D01,19.55,65,Miền Bắc,2025-06-28
+2020,Đại học Bách khoa TP.HCM,Kinh tế,D02,20.28,346,Miền Nam,2025-06-28
+2020,Đại học Bách khoa TP.HCM,Kỹ thuật máy tính,D01,27.48,314,Miền Nam,2025-06-28
+2020,Đại học Bách khoa TP.HCM,Công nghệ thông tin,C01,25.37,135,Miền Nam,2025-06-28
+2020,Đại học Quốc gia TP.HCM,Y khoa,C01,24.87,141,Miền Nam,2025-06-28
+2020,Đại học Quốc gia TP.HCM,Kỹ thuật máy tính,C01,26.94,317,Miền Nam,2025-06-28
+2020,Đại học Quốc gia TP.HCM,Công nghệ thông tin,D01,21.57,417,Miền Nam,2025-06-28
+2020,Đại học Kinh tế TP.HCM,Luật,C00,19.61,57,Miền Nam,2025-06-28
+2020,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,B00,27.63,481,Miền Nam,2025-06-28
+2020,Đại học Kinh tế TP.HCM,Ngôn ngữ Anh,C00,23.11,431,Miền Nam,2025-06-28
+2020,Đại học Y Dược TP.HCM,Quản trị kinh doanh,A01,27.7,83,Miền Nam,2025-06-28
+2020,Đại học Y Dược TP.HCM,Sư phạm Toán,D02,29.05,137,Miền Nam,2025-06-28
+2020,Đại học Y Dược TP.HCM,Kinh tế,B00,20.31,85,Miền Nam,2025-06-28
+2020,Đại học Sư phạm TP.HCM,Y khoa,B01,20.9,446,Miền Nam,2025-06-28
+2020,Đại học Sư phạm TP.HCM,Quản trị kinh doanh,D02,20.76,355,Miền Nam,2025-06-28
+2020,Đại học Sư phạm TP.HCM,Luật,A01,19.58,422,Miền Nam,2025-06-28
+2021,Đại học Bách khoa Hà Nội,Quản trị kinh doanh,C00,24.2,357,Miền Bắc,2025-06-28
+2021,Đại học Bách khoa Hà Nội,Sư phạm Toán,D02,21.34,125,Miền Bắc,2025-06-28
+2021,Đại học Bách khoa Hà Nội,Luật,A00,18.89,186,Miền Bắc,2025-06-28
+2021,Đại học Quốc gia Hà Nội,Kỹ thuật máy tính,B01,18.64,189,Miền Bắc,2025-06-28
+2021,Đại học Quốc gia Hà Nội,Dược học,A00,25.87,360,Miền Bắc,2025-06-28
+2021,Đại học Quốc gia Hà Nội,Kinh tế,C00,18.77,269,Miền Bắc,2025-06-28
+2021,Đại học Kinh tế Quốc dân,Công nghệ thông tin,B01,21.04,498,Miền Nam,2025-06-28
+2021,Đại học Kinh tế Quốc dân,Kinh tế,B00,23.11,172,Miền Nam,2025-06-28
+2021,Đại học Kinh tế Quốc dân,Kỹ thuật máy tính,B00,21.46,498,Miền Nam,2025-06-28
+2021,Đại học Y Hà Nội,Kỹ thuật máy tính,A00,27.98,246,Miền Bắc,2025-06-28
+2021,Đại học Y Hà Nội,Sư phạm Toán,A00,19.76,114,Miền Bắc,2025-06-28
+2021,Đại học Y Hà Nội,Ngôn ngữ Anh,B01,23.27,314,Miền Bắc,2025-06-28
+2021,Đại học Sư phạm Hà Nội,Kỹ thuật máy tính,D01,23.1,320,Miền Bắc,2025-06-28
+2021,Đại học Sư phạm Hà Nội,Quản trị kinh doanh,D02,18.68,227,Miền Bắc,2025-06-28
+2021,Đại học Sư phạm Hà Nội,Sư phạm Toán,D01,24.94,338,Miền Bắc,2025-06-28
+2021,Đại học Bách khoa TP.HCM,Luật,C01,21.99,112,Miền Nam,2025-06-28
+2021,Đại học Bách khoa TP.HCM,Công nghệ thông tin,A00,20.61,248,Miền Nam,2025-06-28
+2021,Đại học Bách khoa TP.HCM,Ngôn ngữ Anh,C00,29.28,386,Miền Nam,2025-06-28
+2021,Đại học Quốc gia TP.HCM,Kinh tế,D02,20.21,272,Miền Nam,2025-06-28
+2021,Đại học Quốc gia TP.HCM,Sư phạm Toán,D01,18.62,377,Miền Nam,2025-06-28
+2021,Đại học Quốc gia TP.HCM,Dược học,A00,20.41,105,Miền Nam,2025-06-28
+2021,Đại học Kinh tế TP.HCM,Kỹ thuật máy tính,B00,21.7,387,Miền Nam,2025-06-28
+2021,Đại học Kinh tế TP.HCM,Ngôn ngữ Anh,A00,26.0,296,Miền Nam,2025-06-28
+2021,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,B01,29.27,212,Miền Nam,2025-06-28
+2021,Đại học Y Dược TP.HCM,Ngôn ngữ Anh,C00,21.73,498,Miền Nam,2025-06-28
+2021,Đại học Y Dược TP.HCM,Luật,A00,19.71,442,Miền Nam,2025-06-28
+2021,Đại học Y Dược TP.HCM,Kinh tế,A01,28.64,414,Miền Nam,2025-06-28
+2021,Đại học Sư phạm TP.HCM,Công nghệ thông tin,B00,27.62,429,Miền Nam,2025-06-28
+2021,Đại học Sư phạm TP.HCM,Kinh tế,A00,24.91,176,Miền Nam,2025-06-28
+2021,Đại học Sư phạm TP.HCM,Y khoa,A00,28.33,249,Miền Nam,2025-06-28
+2022,Đại học Bách khoa Hà Nội,Dược học,D02,28.48,377,Miền Bắc,2025-06-28
+2022,Đại học Bách khoa Hà Nội,Kỹ thuật máy tính,C00,25.55,365,Miền Bắc,2025-06-28
+2022,Đại học Bách khoa Hà Nội,Ngôn ngữ Anh,B01,22.16,337,Miền Bắc,2025-06-28
+2022,Đại học Quốc gia Hà Nội,Công nghệ thông tin,C00,20.36,70,Miền Bắc,2025-06-28
+2022,Đại học Quốc gia Hà Nội,Quản trị kinh doanh,D02,23.38,406,Miền Bắc,2025-06-28
+2022,Đại học Quốc gia Hà Nội,Y khoa,D01,18.63,326,Miền Bắc,2025-06-28
+2022,Đại học Kinh tế Quốc dân,Quản trị kinh doanh,B00,25.85,221,Miền Nam,2025-06-28
+2022,Đại học Kinh tế Quốc dân,Sư phạm Toán,A01,21.32,54,Miền Nam,2025-06-28
+2022,Đại học Kinh tế Quốc dân,Y khoa,B00,18.11,387,Miền Nam,2025-06-28
+2022,Đại học Y Hà Nội,Ngôn ngữ Anh,B00,18.71,155,Miền Bắc,2025-06-28
+2022,Đại học Y Hà Nội,Dược học,C01,26.66,443,Miền Bắc,2025-06-28
+2022,Đại học Y Hà Nội,Kỹ thuật máy tính,C01,21.31,285,Miền Bắc,2025-06-28
+2022,Đại học Sư phạm Hà Nội,Sư phạm Toán,B01,24.99,386,Miền Bắc,2025-06-28
+2022,Đại học Sư phạm Hà Nội,Ngôn ngữ Anh,B00,20.31,72,Miền Bắc,2025-06-28
+2022,Đại học Sư phạm Hà Nội,Kinh tế,A01,20.38,496,Miền Bắc,2025-06-28
+2022,Đại học Bách khoa TP.HCM,Luật,A01,20.07,439,Miền Nam,2025-06-28
+2022,Đại học Bách khoa TP.HCM,Kỹ thuật máy tính,A01,26.53,422,Miền Nam,2025-06-28
+2022,Đại học Bách khoa TP.HCM,Sư phạm Toán,A01,20.08,360,Miền Nam,2025-06-28
+2022,Đại học Quốc gia TP.HCM,Ngôn ngữ Anh,B01,21.0,409,Miền Nam,2025-06-28
+2022,Đại học Quốc gia TP.HCM,Sư phạm Toán,A01,23.45,379,Miền Nam,2025-06-28
+2022,Đại học Quốc gia TP.HCM,Kỹ thuật máy tính,D02,27.19,421,Miền Nam,2025-06-28
+2022,Đại học Kinh tế TP.HCM,Luật,C00,18.06,496,Miền Nam,2025-06-28
+2022,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,B01,22.82,466,Miền Nam,2025-06-28
+2022,Đại học Kinh tế TP.HCM,Công nghệ thông tin,A01,21.66,365,Miền Nam,2025-06-28
+2022,Đại học Y Dược TP.HCM,Ngôn ngữ Anh,C01,29.17,369,Miền Nam,2025-06-28
+2022,Đại học Y Dược TP.HCM,Quản trị kinh doanh,D02,22.48,177,Miền Nam,2025-06-28
+2022,Đại học Y Dược TP.HCM,Y khoa,B00,20.98,71,Miền Nam,2025-06-28
+2022,Đại học Sư phạm TP.HCM,Sư phạm Toán,D02,23.94,195,Miền Nam,2025-06-28
+2022,Đại học Sư phạm TP.HCM,Dược học,B00,24.5,303,Miền Nam,2025-06-28
+2022,Đại học Sư phạm TP.HCM,Ngôn ngữ Anh,A01,27.25,140,Miền Nam,2025-06-28
+2023,Đại học Bách khoa Hà Nội,Kỹ thuật máy tính,C01,22.18,470,Miền Bắc,2025-06-28
+2023,Đại học Bách khoa Hà Nội,Sư phạm Toán,A00,21.72,276,Miền Bắc,2025-06-28
+2023,Đại học Bách khoa Hà Nội,Công nghệ thông tin,A00,28.27,355,Miền Bắc,2025-06-28
+2023,Đại học Quốc gia Hà Nội,Sư phạm Toán,D01,28.75,311,Miền Bắc,2025-06-28
+2023,Đại học Quốc gia Hà Nội,Công nghệ thông tin,D01,28.78,151,Miền Bắc,2025-06-28
+2023,Đại học Quốc gia Hà Nội,Kinh tế,A01,19.71,112,Miền Bắc,2025-06-28
+2023,Đại học Kinh tế Quốc dân,Sư phạm Toán,D02,25.52,450,Miền Nam,2025-06-28
+2023,Đại học Kinh tế Quốc dân,Ngôn ngữ Anh,B00,27.47,243,Miền Nam,2025-06-28
+2023,Đại học Kinh tế Quốc dân,Kỹ thuật máy tính,A00,28.24,483,Miền Nam,2025-06-28
+2023,Đại học Y Hà Nội,Ngôn ngữ Anh,B00,19.92,80,Miền Bắc,2025-06-28
+2023,Đại học Y Hà Nội,Kỹ thuật máy tính,B01,27.77,340,Miền Bắc,2025-06-28
+2023,Đại học Y Hà Nội,Kinh tế,D01,27.01,69,Miền Bắc,2025-06-28
+2023,Đại học Sư phạm Hà Nội,Dược học,C01,18.46,445,Miền Bắc,2025-06-28
+2023,Đại học Sư phạm Hà Nội,Công nghệ thông tin,B00,24.82,175,Miền Bắc,2025-06-28
+2023,Đại học Sư phạm Hà Nội,Y khoa,B01,22.25,375,Miền Bắc,2025-06-28
+2023,Đại học Bách khoa TP.HCM,Dược học,C01,24.53,275,Miền Nam,2025-06-28
+2023,Đại học Bách khoa TP.HCM,Sư phạm Toán,B01,21.58,467,Miền Nam,2025-06-28
+2023,Đại học Bách khoa TP.HCM,Luật,C01,27.01,351,Miền Nam,2025-06-28
+2023,Đại học Quốc gia TP.HCM,Sư phạm Toán,C01,26.88,410,Miền Nam,2025-06-28
+2023,Đại học Quốc gia TP.HCM,Ngôn ngữ Anh,C01,19.29,463,Miền Nam,2025-06-28
+2023,Đại học Quốc gia TP.HCM,Công nghệ thông tin,D01,27.82,202,Miền Nam,2025-06-28
+2023,Đại học Kinh tế TP.HCM,Y khoa,A00,19.71,291,Miền Nam,2025-06-28
+2023,Đại học Kinh tế TP.HCM,Luật,A01,23.12,75,Miền Nam,2025-06-28
+2023,Đại học Kinh tế TP.HCM,Ngôn ngữ Anh,A01,25.59,274,Miền Nam,2025-06-28
+2023,Đại học Y Dược TP.HCM,Ngôn ngữ Anh,A01,29.21,206,Miền Nam,2025-06-28
+2023,Đại học Y Dược TP.HCM,Luật,B00,18.75,322,Miền Nam,2025-06-28
+2023,Đại học Y Dược TP.HCM,Dược học,D01,23.59,384,Miền Nam,2025-06-28
+2023,Đại học Sư phạm TP.HCM,Y khoa,A01,23.16,306,Miền Nam,2025-06-28
+2023,Đại học Sư phạm TP.HCM,Luật,A00,28.57,224,Miền Nam,2025-06-28
+2023,Đại học Sư phạm TP.HCM,Ngôn ngữ Anh,B00,25.61,381,Miền Nam,2025-06-28
+2024,Đại học Bách khoa Hà Nội,Luật,B01,23.89,52,Miền Bắc,2025-06-28
+2024,Đại học Bách khoa Hà Nội,Sư phạm Toán,A01,28.69,366,Miền Bắc,2025-06-28
+2024,Đại học Bách khoa Hà Nội,Công nghệ thông tin,C00,22.78,222,Miền Bắc,2025-06-28
+2024,Đại học Quốc gia Hà Nội,Ngôn ngữ Anh,A01,22.38,230,Miền Bắc,2025-06-28
+2024,Đại học Quốc gia Hà Nội,Dược học,C01,25.98,89,Miền Bắc,2025-06-28
+2024,Đại học Quốc gia Hà Nội,Công nghệ thông tin,C01,21.76,50,Miền Bắc,2025-06-28
+2024,Đại học Kinh tế Quốc dân,Công nghệ thông tin,A00,26.52,314,Miền Nam,2025-06-28
+2024,Đại học Kinh tế Quốc dân,Y khoa,B00,18.76,421,Miền Nam,2025-06-28
+2024,Đại học Kinh tế Quốc dân,Kinh tế,A00,28.89,360,Miền Nam,2025-06-28
+2024,Đại học Y Hà Nội,Công nghệ thông tin,A00,29.4,362,Miền Bắc,2025-06-28
+2024,Đại học Y Hà Nội,Quản trị kinh doanh,C01,24.5,405,Miền Bắc,2025-06-28
+2024,Đại học Y Hà Nội,Ngôn ngữ Anh,C01,18.09,235,Miền Bắc,2025-06-28
+2024,Đại học Sư phạm Hà Nội,Ngôn ngữ Anh,D02,18.99,444,Miền Bắc,2025-06-28
+2024,Đại học Sư phạm Hà Nội,Luật,D01,23.88,312,Miền Bắc,2025-06-28
+2024,Đại học Sư phạm Hà Nội,Dược học,A01,20.91,104,Miền Bắc,2025-06-28
+2024,Đại học Bách khoa TP.HCM,Y khoa,A00,20.34,356,Miền Nam,2025-06-28
+2024,Đại học Bách khoa TP.HCM,Ngôn ngữ Anh,C01,24.9,218,Miền Nam,2025-06-28
+2024,Đại học Bách khoa TP.HCM,Luật,B00,19.06,62,Miền Nam,2025-06-28
+2024,Đại học Quốc gia TP.HCM,Công nghệ thông tin,B01,24.05,422,Miền Nam,2025-06-28
+2024,Đại học Quốc gia TP.HCM,Sư phạm Toán,C00,26.82,368,Miền Nam,2025-06-28
+2024,Đại học Quốc gia TP.HCM,Kinh tế,D01,22.26,360,Miền Nam,2025-06-28
+2024,Đại học Kinh tế TP.HCM,Ngôn ngữ Anh,A01,28.62,388,Miền Nam,2025-06-28
+2024,Đại học Kinh tế TP.HCM,Quản trị kinh doanh,D01,26.45,330,Miền Nam,2025-06-28
+2024,Đại học Kinh tế TP.HCM,Sư phạm Toán,A01,25.01,392,Miền Nam,2025-06-28
+2024,Đại học Y Dược TP.HCM,Y khoa,B00,18.67,423,Miền Nam,2025-06-28
+2024,Đại học Y Dược TP.HCM,Sư phạm Toán,A01,28.59,424,Miền Nam,2025-06-28
+2024,Đại học Y Dược TP.HCM,Dược học,D02,18.19,163,Miền Nam,2025-06-28
+2024,Đại học Sư phạm TP.HCM,Ngôn ngữ Anh,C00,24.61,394,Miền Nam,2025-06-28
+2024,Đại học Sư phạm TP.HCM,Sư phạm Toán,A00,22.55,201,Miền Nam,2025-06-28
+2024,Đại học Sư phạm TP.HCM,Dược học,A01,20.91,127,Miền Nam,2025-06-28

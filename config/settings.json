@@ -1,0 +1,49 @@
+{
+    "scraping": {
+        "delay_range": [1, 3],
+        "max_retries": 3,
+        "timeout": 30,
+        "user_agents": [
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+        ]
+    },
+    "data_sources": {
+        "primary": {
+            "bgddt": "https://moet.gov.vn",
+            "dtdt": "https://thisinh.dangky.thitotnghiep.edu.vn"
+        },
+        "secondary": {
+            "dantri": "https://dantri.com.vn/giao-duc-khuyen-hoc",
+            "vnexpress": "https://vnexpress.net/giao-duc",
+            "tuoitre": "https://tuoitre.vn/giao-duc.htm"
+        }
+    },
+    "analysis": {
+        "default_year_range": [2018, 2024],
+        "significance_level": 0.05,
+        "clustering": {
+            "n_clusters": 3,
+            "random_state": 42
+        }
+    },
+    "output": {
+        "encoding": "utf-8-sig",
+        "decimal_places": 2,
+        "chart_format": "png",
+        "chart_dpi": 300,
+        "chart_size": [12, 8]
+    },
+    "database": {
+        "path": "data/thpt_data.db",
+        "backup_enabled": true,
+        "backup_path": "data/backups"
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "file_rotation": true,
+        "max_size_mb": 10
+    }
+}

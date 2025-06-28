@@ -1,0 +1,152 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Báo cáo Phân tích THPT</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; }
+            h1 { color: #2c3e50; }
+            h2 { color: #34495e; }
+            table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            .highlight { background-color: #fff3cd; }
+        </style>
+    </head>
+    <body>
+        <h1>📊 Báo cáo Phân tích Dữ liệu THPT</h1>
+        <p><strong>Ngày tạo:</strong> 28/06/2025 10:55</p>
+        
+        <h2>🎯 Độ phổ biến tổ hợp môn</h2>
+        <table border="1" class="dataframe" id="popularity">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ma_to_hop</th>
+      <th>so_nganh</th>
+      <th>tong_chi_tieu</th>
+      <th>diem_chuan_tb</th>
+      <th>diem_chuan_std</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D01</td>
+      <td>31</td>
+      <td>9880</td>
+      <td>23.89</td>
+      <td>3.51</td>
+    </tr>
+    <tr>
+      <td>B01</td>
+      <td>29</td>
+      <td>8184</td>
+      <td>24.02</td>
+      <td>3.55</td>
+    </tr>
+    <tr>
+      <td>B00</td>
+      <td>29</td>
+      <td>8711</td>
+      <td>24.39</td>
+      <td>2.99</td>
+    </tr>
+    <tr>
+      <td>A00</td>
+      <td>27</td>
+      <td>7808</td>
+      <td>24.26</td>
+      <td>3.36</td>
+    </tr>
+    <tr>
+      <td>C00</td>
+      <td>27</td>
+      <td>7997</td>
+      <td>23.66</td>
+      <td>3.68</td>
+    </tr>
+    <tr>
+      <td>A01</td>
+      <td>24</td>
+      <td>5350</td>
+      <td>24.06</td>
+      <td>3.34</td>
+    </tr>
+    <tr>
+      <td>C01</td>
+      <td>23</td>
+      <td>5932</td>
+      <td>24.15</td>
+      <td>3.20</td>
+    </tr>
+    <tr>
+      <td>D02</td>
+      <td>20</td>
+      <td>6086</td>
+      <td>23.34</td>
+      <td>3.14</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <h2>📈 Xếp hạng độ khó</h2>
+        <table border="1" class="dataframe" id="difficulty">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ma_to_hop</th>
+      <th>muc_do_kho</th>
+      <th>hang_do_kho</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>D01</td>
+      <td>Khó</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>B01</td>
+      <td>Khó</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <td>C00</td>
+      <td>Khó</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <td>B00</td>
+      <td>Khó</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <td>A00</td>
+      <td>Khó</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <td>A01</td>
+      <td>Trung bình</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <td>C01</td>
+      <td>Dễ</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <td>D02</td>
+      <td>Dễ</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <h2>🔍 Phân tích chi tiết</h2>
+        <p>Các file phân tích chi tiết đã được lưu trong thư mục <code>output/tables/</code></p>
+        
+        <hr>
+        <p><em>Báo cáo được tạo bởi THPT Analysis System</em></p>
+    </body>
+    </html>
+    
